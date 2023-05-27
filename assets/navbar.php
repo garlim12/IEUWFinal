@@ -1,5 +1,9 @@
+<?php
+require '../php/function.php';
+?>
+
 <div class="navigation">
-    <a href="../index.html" class="logo">
+    <a href="index.php" class="logo">
         <img src="images/logo.png" alt="Paulistas - Tienda en línea">
     </a>
 <!--menu-->
@@ -34,10 +38,10 @@
 <div class="navigation2">
     <div></div>
     <ul class="menu2">
-        <li><a href="../cintas.html">Cintas</a></li>
-        <li><a href="../dispensadores.html">Dispensadores</a></li>
-        <li><a href="../cacahuate.html">Cacahuate</a></li>
-        <li><a href="../cajas.html">Cajas</a></li>
+        <li><a href="cintas.html">Cintas</a></li>
+        <li><a href="dispensadores.html">Dispensadores</a></li>
+        <li><a href="cacahuate.html">Cacahuate</a></li>
+        <li><a href="cajas.html">Cajas</a></li>
     </ul>
     <div></div>
 </div>
@@ -51,12 +55,15 @@
         </a>
         <strong>Iniciar sesión</strong>
         <!--inputs-->
-        <form>
-            <input type="email" placeholder="Ejemplo@mail.com" name="email" required>
-            <input type="password" placeholder="Contraseña" name="password" required>
+        <form autocomplete="off" action="" method="post">
+            <input type="hidden" id="action" value="login">
+            <input type="email" id="username" placeholder="Ejemplo@mail.com" required>
+            <input type="password" id="password" placeholder="Contraseña" required>
             <!--submit-->
-            <input type="submit" value="Entrar">
+            <input type="submit" onclick="submitData();" value="Entrar">
         </form>
+
+        <?php require '../php/script.php'; ?>
         <!--olvide contraseña-->
         <div class="form-btns">
             <a href="#" class="forget">Olvide mi contraseña</a>
@@ -71,13 +78,17 @@
         </a>
         <strong>Registrar</strong>
         <!--inputs-->
-        <form>
-            <input type="text" placeholder="Nombre completo" name="fullname" required>
-            <input type="email" placeholder="Ejemplo@mail.com" name="email" required>
-            <input type="password" placeholder="Contraseña" name="password" required>
+        <form autocomplete="off" action="" method="post">
+            <input type="hidden" id="action2" value="register">
+            <input type="text" id="name" placeholder="Nombre completo" name="fullname">
+            <input type="email" id="username2" placeholder="Ejemplo@mail.com" name="email" required>
+            <input type="password" id="password2" placeholder="Contraseña" required>
             <!--submit-->
-            <input type="submit" value="Continuar">
+            <input type="submit" onclick="submitData2();" value="Continuar">
         </form>
+
+        <?php require '../php/script.php'; ?>
+
         <!--olvide contraseña-->
         <div class="form-btns">
             <a href="#" class="already-account">Ya tengo una cuenta</a>
@@ -86,8 +97,8 @@
 </div>
 
 <!--jQuery-->
-<script src="../js/jQuery.js"></script>
-<script type="text/javascript">
+<script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script><script type="text/javascript">
 
     /*Activar inicio sesion*/
     $(document).on('click','.user, .already-account', function(){

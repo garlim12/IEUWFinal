@@ -1,3 +1,7 @@
+<?php
+require 'php/function.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
