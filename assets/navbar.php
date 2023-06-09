@@ -66,7 +66,7 @@ require '../php/function.php';
         <?php require '../php/script.php'; ?>
         <!--olvide contraseña-->
         <div class="form-btns">
-            <a href="#" class="forget">Olvide mi contraseña</a>
+            <a href="#" class="forget">Olvidé mi contraseña</a>
             <a href="#" class="sign-up-btn">Crear cuenta</a>
         </div>
     </div>

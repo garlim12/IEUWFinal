@@ -51,8 +51,8 @@ function login(){
 
     if($password == $row['password']){
       echo "Login Successful";
-      $_SESSION["login"] = true;
-      $_SESSION["id"] = $row["id"];
+      //$_SESSION["login"] = true;
+      //$_SESSION["id"] = $row["id"];
     }
     else{
       echo "Contraseña equivocada";
