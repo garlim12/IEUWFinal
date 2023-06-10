@@ -96,7 +96,7 @@ nav{
 
 .menu2 a:hover,
 .right-menu a:hover{
-    color: 0b9d8a;
+    color: #0b9d8a;
     transition: all ease 0.3s;
 }
 
@@ -151,6 +151,7 @@ nav{
     z-index: 102;
 }
 
+.logout-form,
 .login-form,
 .sign-up-form{
     width: 420px;
@@ -165,6 +166,7 @@ nav{
     position: relative;
 }
 
+.logout-form form,
 .login-form form,
 .sign-up-form form{
     display: flex;
@@ -174,6 +176,7 @@ nav{
     width: 100%;
 }
 
+.logout-form strong,
 .login-form strong,
 .sign-up-form strong{
     color: #272727;
@@ -184,6 +187,7 @@ nav{
     font-weight: 500;
 }
 
+.logout-form input,
 .login-form input,
 .sign-up-form input{
     width: 90%;
@@ -195,11 +199,13 @@ nav{
     border-radius: 7px;
 }
 
+.logout-form input::placeholder,
 .login-form input::placeholder,
 .sign-up-form input::placeholder{
     color: rgba(0,0,0,0.5);
 }
 
+.logout-form input[type="submit"],
 .login-form input[type="submit"],
 .sign-up-form input[type="submit"]{
     background-color: #0b9d8a;
@@ -238,12 +244,15 @@ nav{
     color: #868686;
 }
 
+.logout-form,
 .login-form,
 .sign-up-form,
 .form{
     display: none;
 }
 
+.logout-active,
+.logout-active .logout-form,
 .login-active,
 .login-active .login-form{
     display: flex;
@@ -400,7 +409,7 @@ nav{
     font-weight: 400;
 }
 .product-box:hover{
-    box-shadow: 0px 0px 30px rgba(255, 238, 0, 0.20);
+    box-shadow: 0px 0px 30px rgba(255, 238, 0, 0.25);
 }
 .add-cart{
     position: absolute;
@@ -593,6 +602,39 @@ footer{
     letter-spacing: 2px;
     margin-top: 14px;
 }
+
 .banner-text strong font{
     color: #0b9d8a;
+}
+
+.input-control {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-control input {
+    border: 2px solid #f0f0f0;
+	border-radius: 4px;
+	display: block;
+	font-size: 12px;
+	padding: 10px;
+	width: 100%;
+}
+
+.input-control input:focus {
+    outline: 0;
+}
+
+.input-control.success input {
+    border-color: #09c372;
+}
+
+.input-control.error input {
+    border-color: #ff3860;
+}
+
+.input-control .error {
+    color: #ff3860;
+    font-size: 9px;
+    height: 13px;
 }

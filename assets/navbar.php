@@ -19,10 +19,12 @@ require '../php/function.php';
             </div>
         </li>
     </ul>
-
 </ul>
 <!--right menu-->
 <div class="right-menu">
+    <!--usuario iniciado-->
+    <a href="#" class="user2"><i class="fas fa-user"></i>
+    </a>
     <!--usuario-->
     <a href="#" class="user"><i class="fas fa-user"></i>
     </a>
@@ -71,6 +73,27 @@ require '../php/function.php';
         </div>
     </div>
 
+        <!--login-->
+    <div class="logout-form">
+        <a href="#" class="form-cancel">
+            <i class="fas fa-times"></i>
+        </a>
+        <strong>Bienvenido</strong>
+        <!--inputs-->
+        <form autocomplete="off" action="" method="post">
+            <input type="hidden" id="action3" value="logout">
+            <a>
+                <?php echo $_SESSION["name"]; ?>
+            </a>
+            <a>
+                <?php echo $_SESSION["email"]; ?>
+            </a>
+            <input type="submit" onclick="submitData3();" value="Cerrar sesión">
+        </form>
+
+        <?php require '../php/script.php'; ?>
+    </div>
+
     <!--Registro-->
     <div class="sign-up-form">
         <a href="#" class="form-cancel">
@@ -78,11 +101,16 @@ require '../php/function.php';
         </a>
         <strong>Registrar</strong>
         <!--inputs-->
-        <form autocomplete="off" action="" method="post">
+        <form id="registroForm" autocomplete="off" action="" method="post">
             <input type="hidden" id="action2" value="register">
-            <input type="text" id="name" placeholder="Nombre completo" name="fullname">
+            <input type="text" id="name" placeholder="Nombre completo" name="fullname" required>
+            <div class="error"></div>
             <input type="email" id="username2" placeholder="Ejemplo@mail.com" name="email" required>
+            <div class="error"></div>
             <input type="password" id="password2" placeholder="Contraseña" required>
+            <div class="error"></div>
+            <input type="password2" id="password22" placeholder="Confirmar contraseña" required>
+            <div class="error"></div>
             <!--submit-->
             <input type="submit" onclick="submitData2();" value="Continuar">
         </form>
@@ -101,18 +129,44 @@ require '../php/function.php';
 </script><script type="text/javascript">
 
     /*Activar inicio sesion*/
+    // if ($_SESSION["login"] == true;) {
+
+    //     $(document).on('click','.user, .already-account', function(){
+    //     $('.form').addClass('logout-active').removeClass('sign-up-active').removeClass('login-active')
+    //     });
+
+    // }else{
+
+    //     $(document).on('click','.user, .already-account', function(){
+    //     $('.form').addClass('login-active').removeClass('sign-up-active').removeClass('logout-active')
+    //     });
+
+    // }
+
+    $(document).on('click','.user2, .already-account', function(){
+        $('.form').addClass('logout-active').removeClass('sign-up-active').removeClass('login-active')
+        });
+
+    $(document).on('click','.user2, .already-account', function(){
+        $('.user').remove();
+        });
+
     $(document).on('click','.user, .already-account', function(){
-        $('.form').addClass('login-active').removeClass('sign-up-active')
-    });
+        $('.form').addClass('login-active').removeClass('sign-up-active').removeClass('logout-active').removeClass('user2-active')
+        });
+
+    $(document).on('click','.user, .already-account', function(){
+        $('.user2').remove();
+        });
 
     /*Activar registro*/
     $(document).on('click','.sign-up-btn', function(){
-        $('.form').addClass('sign-up-active').removeClass('login-active')
+        $('.form').addClass('sign-up-active').removeClass('login-active').removeClass('logout-active')
     });
 
     /*Cerrar inicio y registro*/
     $(document).on('click','.form-cancel', function(){
-        $('.form').removeClass('login-active').removeClass('sign-up-active')
+        $('.form').removeClass('login-active').removeClass('sign-up-active').removeClass('logout-active')
     });
 
 
