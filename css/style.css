@@ -426,7 +426,9 @@ nav{
     box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
     display: none;
     animation: fade 0.3s;
- 
+    padding: 0;
+    border: none;
+    cursor:pointer;
 }
 .add-cart:hover{
     background-color: #0a7a6b;

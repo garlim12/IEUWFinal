@@ -92,9 +92,11 @@ $(function(){
           <!--product-img------------>
           <div class="product-img">
               <!--add-cart---->
-              <a href="#" class="add-cart">
+              <input type="hidden" id="action4" value="interes">
+              <input type="hidden" id="identificador" value="1010"></input>
+              <button type="submit" onclick="agregarInteres();" class="add-cart">
                   <i class="fas fa-shopping-cart"></i>
-                </a>
+              </button>
               <!--img------>
             <img src="images/prod1.jpg" >
           </div>
@@ -108,8 +110,12 @@ $(function(){
         <div class="product-box">
             <!--product-img------------>
             <div class="product-img">
-                <!--add-cart---->
-              <a href="#" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+              <!--add-cart---->
+              <input type="hidden" id="action5" value="interes2">
+              <input type="hidden" id="identificador2" value="1011"></input>
+              <button type="submit" onclick="agregarInteres1();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
               <!--img------>
               <img src="images/prod2.png" >
             </div>
@@ -123,8 +129,12 @@ $(function(){
       <div class="product-box">
         <!--product-img------------>
         <div class="product-img">
-            <!--add-cart---->
-            <a href="#" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+              <!--add-cart---->
+              <input type="hidden" id="action6" value="interes3">
+              <input type="hidden" id="identificador3" value="1012">
+              <button type="submit" onclick="agregarInteres2();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
             <!--img------>
           <img src="images/3.png" >
         </div>
@@ -138,8 +148,12 @@ $(function(){
       <div class="product-box">
         <!--product-img------------>
         <div class="product-img">
-            <!--add-cart---->
-            <a href="#" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+              <!--add-cart---->
+              <input type="hidden" id="action7" value="interes4">
+              <input type="hidden" id="identificador4" value="1013">
+              <button type="submit" onclick="agregarInteres3();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
             <!--img------>
           <img src="images/prod4.jpg" >
         </div>
@@ -153,8 +167,12 @@ $(function(){
       <div class="product-box">
         <!--product-img------------>
         <div class="product-img">
-            <!--add-cart---->
-            <a href="#" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+              <!--add-cart---->
+              <input type="hidden" id="action8" value="interes5">
+              <input type="hidden" id="identificador5" value="1014">
+              <button type="submit" onclick="agregarInteres4();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
             <!--img------>
           <img src="images/prod5.png" >
         </div>
@@ -168,8 +186,12 @@ $(function(){
       <div class="product-box">
         <!--product-img------------>
         <div class="product-img">
-            <!--add-cart---->
-            <a href="#" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+              <!--add-cart---->
+              <input type="hidden" id="action9" value="interes6">
+              <input type="hidden" id="identificador6" value="1015">
+              <button type="submit" onclick="agregarInteres5();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
             <!--img------>
           <img src="images/prod6.jpg" >
         </div>
@@ -183,8 +205,12 @@ $(function(){
       <div class="product-box">
         <!--product-img------------>
         <div class="product-img">
-            <!--add-cart---->
-            <a href="#" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+              <!--add-cart---->
+              <input type="hidden" id="action10" value="interes7">
+              <input type="hidden" id="identificador7" value="1016">
+              <button type="submit" onclick="agregarInteres6();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
             <!--img------>
           <img src="images/prod7.jpg" >
         </div>
@@ -198,10 +224,12 @@ $(function(){
       <div class="product-box">
         <!--product-img------------>
         <div class="product-img">
-            <!--add-cart---->
-            <a href="#" class="add-cart">
-                <i class="fas fa-shopping-cart"></i>
-            </a>
+              <!--add-cart---->
+              <input type="hidden" id="action11" value="interes8">
+              <input type="hidden" id="identificador8" value="1017">
+              <button type="submit" onclick="agregarInteres7();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
             <!--img------>
           <img src="images/prod8.jpg" >
         </div>
@@ -252,60 +280,82 @@ $(function(){
 </section>
 
 <div class="feature-heading">
-    <strong>Productos más vendidos</strong>
+    <strong>Productos más agregados a carritos</strong>
 </div>
 
 <section class="feature-heading">
 
     <!--productos----------------------->
     <div class="product-container">
-                    
       <!--caja-1---------->
         <div class="product-box">
             <!--product-img------------>
             <div class="product-img">
-                <!--add-cart---->
-                <a href="#" class="add-cart">
-                    <i class="fas fa-shopping-cart"></i>
-                  </a>
+              <!--add-cart---->
+              <input type="hidden" id="actionTop1" value="interesTop1">
+              <input type="hidden" id="identificadorTop1" value="<?php echo $_SESSION["id"] ?>">
+              <button type="submit" onclick="agregarInteresTop1();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
                 <!--img------>
-              <img src="images/prod1.jpg" >
+              <img src="<?php echo $_SESSION["imagen"] ?>" >
             </div>
             <!--product-details-------->
             <div class="product-details">
-                <a href="cintas.html" class="p-name">Cinta engomada color kraft</a>
-                <span class="p-price">$5.70</span>
+                <a href="#" class="p-name">
+                  <?php echo $_SESSION["nombre"] ?>
+                </a>
+                <span class="p-price">$
+                  <?php echo $_SESSION["precio"] ?>
+                </span>
             </div>
         </div>
           <!--caja-2---------->
           <div class="product-box">
-              <!--product-img------------>
-              <div class="product-img">
-                  <!--add-cart---->
-                <a href="#" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
+            <!--product-img------------>
+            <div class="product-img">
+              <!--add-cart---->
+              <input type="hidden" id="actionTop2" value="interesTop2">
+              <input type="hidden" id="identificadorTop2" value="<?php echo $_SESSION["id2"] ?>">
+              <button type="submit" onclick="agregarInteresTop2();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
                 <!--img------>
-                <img src="images/prod2.png" >
-              </div>
-              <!--product-details-------->
-              <div class="product-details">
-                  <a href="cintas.html" class="p-name">Cinta Motivo Navideño Gorilla</a>
-                  <span class="p-price">$8.40</span>
-              </div>
-          </div>
+              <img src="<?php echo $_SESSION["imagen2"] ?>" >
+            </div>
+            <!--product-details-------->
+            <div class="product-details">
+                <a href="#" class="p-name">
+                  <?php echo $_SESSION["nombre2"] ?>
+                </a>
+                <span class="p-price">$
+                  <?php echo $_SESSION["precio2"] ?>
+                </span>
+            </div>
+        </div>
         <!--caja-3---------->
         <div class="product-box">
-          <!--product-img------------>
-          <div class="product-img">
+            <!--product-img------------>
+            <div class="product-img">
               <!--add-cart---->
-              <a href="dispensadores.html" class="add-cart"><i class="fas fa-shopping-cart"></i></a>
-              <!--img------>
-            <img src="images/3.png" >
-          </div>
-          <!--product-details-------->
-          <div class="product-details">
-              <a href="#" class="p-name">Mini equipo dispensador Better Packages</a>
-              <span class="p-price">$226.00</span>
-          </div>
+              <input type="hidden" id="actionTop3" value="interesTop3">
+              <input type="hidden" id="identificadorTop3" value="<?php echo $_SESSION["id3"] ?>">
+              <button type="submit" onclick="agregarInteresTop3();" class="add-cart">
+                  <i class="fas fa-shopping-cart"></i>
+              </button>
+                <!--img------>
+              <img src="<?php echo $_SESSION["imagen3"] ?>" >
+            </div>
+            <!--product-details-------->
+            <div class="product-details">
+                <a href="#" class="p-name">
+                  <?php echo $_SESSION["nombre3"] ?>
+                </a>
+                <span class="p-price">$
+                  <?php echo $_SESSION["precio3"] ?>
+                </span>
+            </div>
+        </div>
       </div>
     </div>
   </section>

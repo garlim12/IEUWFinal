@@ -110,7 +110,7 @@ if (!isset($_SESSION["login"])) {
             <div class="error"></div>
             <input type="password" id="password2" placeholder="Contraseña" required>
             <div class="error"></div>
-            <input type="password2" id="password22" placeholder="Confirmar contraseña" required>
+            <input type="password" id="password22" placeholder="Confirmar contraseña" required>
             <div class="error"></div>
             <!--submit-->
             <input type="submit" onclick="submitData2();" value="Continuar">
