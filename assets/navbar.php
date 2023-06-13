@@ -1,5 +1,9 @@
 <?php
 require '../php/function.php';
+
+if (!isset($_SESSION["login"])) {
+    $_SESSION["login"] = false;
+}
 ?>
 
 <div class="navigation">
@@ -22,9 +26,6 @@ require '../php/function.php';
 </ul>
 <!--right menu-->
 <div class="right-menu">
-    <!--usuario iniciado-->
-    <a href="#" class="user2"><i class="fas fa-user"></i>
-    </a>
     <!--usuario-->
     <a href="#" class="user"><i class="fas fa-user"></i>
     </a>
@@ -124,40 +125,33 @@ require '../php/function.php';
     </div>
 </div>
 
+<?php
+if ($_SESSION["login"]) {
+?>
+
+    <script>
+        $(document).on('click','.user, .already-account', function(){
+        $('.form').addClass('logout-active').removeClass('sign-up-active').removeClass('login-active')
+        });
+    </script>
+
+<?php
+} else { 
+?>
+
+    <script>
+        $(document).on('click','.user, .already-account', function(){
+        $('.form').addClass('login-active').removeClass('sign-up-active').removeClass('logout-active')
+        });
+    </script>
+
+<?php
+}
+?>
+
 <!--jQuery-->
 <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
 </script><script type="text/javascript">
-
-    /*Activar inicio sesion*/
-    // if ($_SESSION["login"] == true;) {
-
-    //     $(document).on('click','.user, .already-account', function(){
-    //     $('.form').addClass('logout-active').removeClass('sign-up-active').removeClass('login-active')
-    //     });
-
-    // }else{
-
-    //     $(document).on('click','.user, .already-account', function(){
-    //     $('.form').addClass('login-active').removeClass('sign-up-active').removeClass('logout-active')
-    //     });
-
-    // }
-
-    $(document).on('click','.user2, .already-account', function(){
-        $('.form').addClass('logout-active').removeClass('sign-up-active').removeClass('login-active')
-        });
-
-    $(document).on('click','.user2, .already-account', function(){
-        $('.user').remove();
-        });
-
-    $(document).on('click','.user, .already-account', function(){
-        $('.form').addClass('login-active').removeClass('sign-up-active').removeClass('logout-active').removeClass('user2-active')
-        });
-
-    $(document).on('click','.user, .already-account', function(){
-        $('.user2').remove();
-        });
 
     /*Activar registro*/
     $(document).on('click','.sign-up-btn', function(){

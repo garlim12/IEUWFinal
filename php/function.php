@@ -94,6 +94,8 @@ function login(){
 
 // LOGOUT
 function logout(){
+  global $conn;
+
   unset($_SESSION["name"]);
   unset($_SESSION["email"]);
   unset($_SESSION["login"]);
