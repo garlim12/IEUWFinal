@@ -4,6 +4,8 @@ require '../php/function.php';
 if (!isset($_SESSION["login"])) {
     $_SESSION["login"] = false;
 }
+
+
 ?>
 
 <div class="navigation">

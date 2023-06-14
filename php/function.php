@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost:3307", "root", "", "paulistasieuw");
+$conn = mysqli_connect("localhost", "id20909703_root", "_123456Web", "id20909703_paulistasieuw");
 
 // IF
 if(isset($_POST["action"])){
@@ -137,6 +137,8 @@ function logout(){
   unset($_SESSION["login"]);
 
   $_SESSION["login"] = false;
+  
+    echo "Sesión cerrada";
 }
 
 // TOP 3 PRODUCTOS
@@ -282,6 +284,5 @@ function topProductosInteres(){
 
   $query = "UPDATE productos SET interes = interes + 1 WHERE id = $identificador";
   mysqli_query($conn, $query);
-  echo $identificador;
 }
 ?>
