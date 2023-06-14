@@ -15,27 +15,35 @@ if(isset($_POST["action"])){
   }
   else if($_POST["action"] == "interes"){
     interes();
+    productoCarro();
   }
   else if($_POST["action"] == "interes2"){
     interes2();
+    productoCarro();
   }
   else if($_POST["action"] == "interes3"){
     interes3();
+    productoCarro();
   }
   else if($_POST["action"] == "interes4"){
     interes4();
+    productoCarro();
   }
   else if($_POST["action"] == "interes5"){
     interes5();
+    productoCarro();
   }
   else if($_POST["action"] == "interes6"){
     interes6();
+    productoCarro();
   }
   else if($_POST["action"] == "interes7"){
     interes7();
+    productoCarro();
   }
   else if($_POST["action"] == "interes8"){
     interes8();
+    productoCarro();
   }
   else if($_POST["action"] == "topProductos"){
     topProductos();
@@ -48,6 +56,9 @@ if(isset($_POST["action"])){
   }
   else if($_POST["action"] == "interesTop3"){
     topProductosInteres();
+  }
+  else if($_POST["action"] == "obten"){
+    obtenerCarrito();
   }
 }
 
@@ -95,6 +106,7 @@ function register(){
 
   $query = "INSERT INTO user VALUES('$name', '$username', '$password')";
   mysqli_query($conn, $query);
+  
   echo "Registro exitoso";
 }
 
@@ -141,6 +153,58 @@ function logout(){
     echo "Sesión cerrada";
 }
 
+function insertarCompra(){
+  global $conn;
+
+  $email = $_SESSION["email"];
+  $total = $_SESSION["total"];
+
+  $query = "INSERT INTO compras VALUES('$email', '$total')";
+  mysqli_query($conn, $query);  
+}
+
+// function borrarProductoCarrito(){
+//   global $conn;
+
+//   $nombre = $_SESSION["nombreEliminar"];
+//   $email = $_SESSION["email"];
+
+//   $query = "DELETE from carritos WHERE email = '$email' and nombre = '$nombre'";
+//   mysqli_query($conn, $query);  
+
+//   echo "Producto eliminado";
+
+//   unset($_SESSION["tablaCarrito"]);
+//   obtenerCarrito();
+// }
+
+function borrarProductoCarrito(){
+  global $conn;
+
+  $email = $_SESSION["email"];
+
+  $query = "DELETE FROM carritos WHERE email = '$email'";
+  mysqli_query($conn, $query);  
+
+  obtenerCarrito();
+}
+
+function obtenerCarrito(){
+  global $conn;
+
+  $email = $_SESSION["email"];
+
+  $user = mysqli_query($conn, "select nombre, precio, imagen from carritos where email = '$email'");
+
+  if(mysqli_num_rows($user) > 0){
+
+    $table = mysqli_fetch_all($user);
+
+    $_SESSION["tablaCarrito"] = $table;
+  }
+  echo "Accediendo al carrito de compras";
+}
+
 // TOP 3 PRODUCTOS
 function topProductos(){
   global $conn;
@@ -185,6 +249,20 @@ function topProductos(){
 
     // echo $myJSON;
   }
+}
+
+function productoCarro(){
+  global $conn;
+
+  $email = $_SESSION["email"];
+
+  $identificador = $_POST["identificador"];
+  $nombre = $_POST["nombre"];
+  $precio = $_POST["precio"];
+  $imagen = $_POST["imagen"];
+
+  $query = "INSERT INTO carritos VALUES('$email', '$identificador', '$nombre', '$precio', '$imagen')";
+  mysqli_query($conn, $query);
 }
 
 // Agregar interes a producto

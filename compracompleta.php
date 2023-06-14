@@ -41,6 +41,27 @@ $(function(){
     <h2>¡Compra exitosa!</h2>
   </div>
 
+  <div class="feature-heading">
+    <h2>Gracias por tu compra <?php echo $_SESSION["name"]; ?></h2>
+  </div>
+
+  <div class="feature-heading">
+    <h2>Se envió un recibo a tu correo:</h2>
+  </div>
+
+  <div class="feature-heading">
+    <h2><?php echo $_SESSION["email"]; ?></h2>
+  </div>
+
+  <?php
+    insertarCompra();
+
+    unset($_SESSION["total"]);
+    unset($_SESSION["tablaCarrito"]);
+
+    borrarProductoCarrito();
+  ?>
+
 <!---Ofertas------------------------------------>
 <section class="sale">
     <!--oferta-1-------------------->

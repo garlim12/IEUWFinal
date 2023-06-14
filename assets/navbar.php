@@ -32,7 +32,9 @@ if (!isset($_SESSION["login"])) {
     <a href="#" class="user"><i class="fas fa-user"></i>
     </a>
     <!--carrito-->
-    <a href="carrito.php">
+    <input type="hidden" id="actionCarrito" value="obten">
+
+    <a href="carrito.php" onclick="obtenerCarrito();">
         <i class="fas fa-shopping-cart">
         <span class="num-cart-product">$</span>
         </i>

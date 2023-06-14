@@ -47,62 +47,37 @@ $(function(){
       <th>Cantidad</th>
       <th>Subtotal</th>
     </tr>
-    <!--Producto-->
+
+  <?php
+  $_SESSION["total"] = 0;
+
+  if (isset($_SESSION["tablaCarrito"])) {
+
+    foreach( $_SESSION["tablaCarrito"] as $row ){
+      $_SESSION["total"] = $_SESSION["total"] + $row[1];
+  ?>
+            <!--Producto-->
     <tr>
       <td>
         <div class="cart-info">
-          <img src="images/prod2.png" alt="">
+          <img src="<?php echo $row[2]; ?>" alt="">
           <div>
-            <p>Cinta Motivo Navideño Gorilla</p>
-            <small>Precio: $50.00</small>
+            <p><?php echo $row[0]; ?></p>
+            <small>Precio: $<?php echo $row[1]; ?></small>
             <br>
-            <a href="">Eliminar</a>
           </div>
         </div>
 
       </td>
       <td><input type="number" value="1"></td>
-      <td>$50.00</td>
+      <td>$<?php echo $row[1]; ?></td>
     </tr>
     <!--Fin producto-->
 
-        <!--Producto-->
-        <tr>
-      <td>
-        <div class="cart-info">
-          <img src="images/prod2.png" alt="">
-          <div>
-            <p>Cinta Motivo Navideño Gorilla</p>
-            <small>Precio: $50.00</small>
-            <br>
-            <a href="">Eliminar</a>
-          </div>
-        </div>
-
-      </td>
-      <td><input type="number" value="1"></td>
-      <td>$50.00</td>
-    </tr>
-    <!--Fin producto-->
-
-        <!--Producto-->
-        <tr>
-      <td>
-        <div class="cart-info">
-          <img src="images/prod2.png" alt="">
-          <div>
-            <p>Cinta Motivo Navideño Gorilla</p>
-            <small>Precio: $50.00</small>
-            <br>
-            <a href="">Eliminar</a>
-          </div>
-        </div>
-
-      </td>
-      <td><input type="number" value="1"></td>
-      <td>$50.00</td>
-    </tr>
-    <!--Fin producto-->
+  <?php
+    }
+  }
+  ?>
 
     <tr>
       <th></th>
@@ -116,7 +91,10 @@ $(function(){
   <table>
     <tr>
       <td>Subtotal</td>
-      <td>$200.00</td>
+      <td>$<?php echo $_SESSION["total"]; 
+      $_SESSION["total"] = $_SESSION["total"] + 150;
+
+      ?></td>
     </tr>
     <tr>
       <td>Envío a toda la república</td>
@@ -124,7 +102,7 @@ $(function(){
     </tr>
     <tr>
       <td>Total</td>
-      <td>$350.00</td>
+      <td>$<?php echo $_SESSION["total"]; ?></td>
     </tr>
     <tr>
       <td>

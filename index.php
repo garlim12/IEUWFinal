@@ -95,6 +95,10 @@ $(function(){
               <!--add-cart---->
               <input type="hidden" id="action4" value="interes">
               <input type="hidden" id="identificador" value="1010"></input>
+              <input type="hidden" id="nombre" value="Cinta engomada color kraft"></input>
+              <input type="hidden" id="precio" value="5.70"></input>
+              <input type="hidden" id="imagen" value="images/prod1.jpg"></input>
+
               <button type="submit" onclick="agregarInteres();" class="add-cart">
                   <i class="fas fa-shopping-cart"></i>
               </button>
@@ -114,6 +118,10 @@ $(function(){
               <!--add-cart---->
               <input type="hidden" id="action5" value="interes2">
               <input type="hidden" id="identificador2" value="1011"></input>
+              <input type="hidden" id="nombre2" value="Cinta Motivo Navideño Gorilla"></input>
+              <input type="hidden" id="precio2" value="8.40"></input>
+              <input type="hidden" id="imagen2" value="images/prod2.png"></input>
+
               <button type="submit" onclick="agregarInteres1();" class="add-cart">
                   <i class="fas fa-shopping-cart"></i>
               </button>
@@ -133,6 +141,10 @@ $(function(){
               <!--add-cart---->
               <input type="hidden" id="action6" value="interes3">
               <input type="hidden" id="identificador3" value="1012">
+              <input type="hidden" id="nombre3" value="Mini equipo dispensador Better Packages"></input>
+              <input type="hidden" id="precio3" value="226.00"></input>
+              <input type="hidden" id="imagen3" value="images/3.png"></input>
+
               <button type="submit" onclick="agregarInteres2();" class="add-cart">
                   <i class="fas fa-shopping-cart"></i>
               </button>
@@ -152,6 +164,10 @@ $(function(){
               <!--add-cart---->
               <input type="hidden" id="action7" value="interes4">
               <input type="hidden" id="identificador4" value="1013">
+              <input type="hidden" id="nombre4" value="Cinta adhesiva transparente"></input>
+              <input type="hidden" id="precio4" value="22.00"></input>
+              <input type="hidden" id="imagen4" value="images/prod4.jpg"></input>
+
               <button type="submit" onclick="agregarInteres3();" class="add-cart">
                   <i class="fas fa-shopping-cart"></i>
               </button>
@@ -171,6 +187,10 @@ $(function(){
               <!--add-cart---->
               <input type="hidden" id="action8" value="interes5">
               <input type="hidden" id="identificador5" value="1014">
+              <input type="hidden" id="nombre5" value="CAJA KRAFT 7-9 kg"></input>
+              <input type="hidden" id="precio5" value="4.70"></input>
+              <input type="hidden" id="imagen5" value="images/prod5.png"></input>
+
               <button type="submit" onclick="agregarInteres4();" class="add-cart">
                   <i class="fas fa-shopping-cart"></i>
               </button>
@@ -190,6 +210,10 @@ $(function(){
               <!--add-cart---->
               <input type="hidden" id="action9" value="interes6">
               <input type="hidden" id="identificador6" value="1015">
+              <input type="hidden" id="nombre6" value="Cacahuate biodegradable"></input>
+              <input type="hidden" id="precio6" value="341.00"></input>
+              <input type="hidden" id="imagen6" value="images/prod6.jpg"></input>
+
               <button type="submit" onclick="agregarInteres5();" class="add-cart">
                   <i class="fas fa-shopping-cart"></i>
               </button>
@@ -209,6 +233,10 @@ $(function(){
               <!--add-cart---->
               <input type="hidden" id="action10" value="interes7">
               <input type="hidden" id="identificador7" value="1016">
+              <input type="hidden" id="nombre7" value="Sobre de presión sensitiva (Millar)"></input>
+              <input type="hidden" id="precio7" value="595.00"></input>
+              <input type="hidden" id="imagen7" value="images/prod7.jpg"></input>
+
               <button type="submit" onclick="agregarInteres6();" class="add-cart">
                   <i class="fas fa-shopping-cart"></i>
               </button>
@@ -228,6 +256,10 @@ $(function(){
               <!--add-cart---->
               <input type="hidden" id="action11" value="interes8">
               <input type="hidden" id="identificador8" value="1017">
+              <input type="hidden" id="nombre8" value="Sellador automático de cinta"></input>
+              <input type="hidden" id="precio8" value="42282.00"></input>
+              <input type="hidden" id="imagen8" value="images/prod8.jpg"></input>
+
               <button type="submit" onclick="agregarInteres7();" class="add-cart">
                   <i class="fas fa-shopping-cart"></i>
               </button>

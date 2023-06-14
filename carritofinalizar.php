@@ -52,7 +52,7 @@ $(function(){
     </form>
 
     <strong>Pago total: $</strong>
-    <strong>1000</strong>
+    <strong><?php echo $_SESSION["total"]; ?></strong>
     
     <div class="subscribe">
           <a href="compraproceso.php">
