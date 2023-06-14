@@ -1,13 +1,13 @@
 <div class="navigation">
     <a href="index.php" class="logo">
-        <img src="images/logo.png" alt="Paulistas - Tienda en línea">
+        <img src="images/logo.png" alt="Paulistas - Compra">
     </a>
 <!--menu-->
 <ul class="menu-general">
 <!--right menu-->
 <div class="right-menu">
     <!--usuario-->
-    <a href="#" class="user">Bienvenido a Paulistas</a>
+    <a href="#" class="user">En proceso de compra...</a>
 </div>
 </ul>
 

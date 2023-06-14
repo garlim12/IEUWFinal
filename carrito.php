@@ -34,32 +34,114 @@ $(function(){
 
   <!--Categorias destacadas-->
   <div class="feature-heading">
-    <h2>Registro exitoso</h2>
+    <h2>Carrito</h2>
   </div>
 
-  <section class="new-arrival">
+  <div class="product-container2">
 
-  <!--productos----------------------->
-  <div class="product-container">
-                  
-    <!--caja-1---------->
-      <div class="product-box">
-          <!--product-img------------>
-          <div class="product-img">
-              <!--add-cart---->
-              <input type="hidden" id="action4" value="interes">
-              <input type="hidden" id="identificador" value="1010"></input>
-              <!--img------>
-            <img src="images/thumbs.png" >
+  <div class="small-container cart-page">
+
+  <table>
+    <tr>
+      <th>Producto</th>
+      <th>Cantidad</th>
+      <th>Subtotal</th>
+    </tr>
+    <!--Producto-->
+    <tr>
+      <td>
+        <div class="cart-info">
+          <img src="images/prod2.png" alt="">
+          <div>
+            <p>Cinta Motivo Navideño Gorilla</p>
+            <small>Precio: $50.00</small>
+            <br>
+            <a href="">Eliminar</a>
           </div>
-          <!--product-details-------->
-          <div class="product-details">
-              <a href="#" class="p-name">Bienvenido a Paulistas USUARIO, tu tienda en línea donde podrás conseguir todo para realizar tus envíos</a>
-              <span class="p-price">No olvides revisar las promociones y utilizar el cupón de abajo para tu primera compra</span>
+        </div>
+
+      </td>
+      <td><input type="number" value="1"></td>
+      <td>$50.00</td>
+    </tr>
+    <!--Fin producto-->
+
+        <!--Producto-->
+        <tr>
+      <td>
+        <div class="cart-info">
+          <img src="images/prod2.png" alt="">
+          <div>
+            <p>Cinta Motivo Navideño Gorilla</p>
+            <small>Precio: $50.00</small>
+            <br>
+            <a href="">Eliminar</a>
           </div>
-      </div>
+        </div>
+
+      </td>
+      <td><input type="number" value="1"></td>
+      <td>$50.00</td>
+    </tr>
+    <!--Fin producto-->
+
+        <!--Producto-->
+        <tr>
+      <td>
+        <div class="cart-info">
+          <img src="images/prod2.png" alt="">
+          <div>
+            <p>Cinta Motivo Navideño Gorilla</p>
+            <small>Precio: $50.00</small>
+            <br>
+            <a href="">Eliminar</a>
+          </div>
+        </div>
+
+      </td>
+      <td><input type="number" value="1"></td>
+      <td>$50.00</td>
+    </tr>
+    <!--Fin producto-->
+
+    <tr>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </table>
+
+  <div class="total-price">
+
+  <table>
+    <tr>
+      <td>Subtotal</td>
+      <td>$200.00</td>
+    </tr>
+    <tr>
+      <td>Envío a toda la república</td>
+      <td>$150.00</td>
+    </tr>
+    <tr>
+      <td>Total</td>
+      <td>$350.00</td>
+    </tr>
+    <tr>
+      <td>
+        <div class="subscribe">
+          <a href="carritofinalizar.php">
+          <input type="submit" onclick="" value="Continuar">
+          </a>
+        </div>
+      </td>
+    </tr>
+  </table>
+
   </div>
-</section>
+
+  </div>
+  </div>
+
 
 <!---Ofertas------------------------------------>
 <section class="sale">

@@ -1,6 +1,6 @@
 <?php
 session_start();
-$conn = mysqli_connect("localhost", "id20909703_root", "_123456Web", "id20909703_paulistasieuw");
+$conn = mysqli_connect("localhost:3307", "root", "", "paulistasieuw");
 
 // IF
 if(isset($_POST["action"])){

@@ -13,7 +13,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -37,7 +37,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -57,7 +57,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -77,7 +77,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -98,7 +98,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -119,7 +119,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -140,7 +140,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -161,7 +161,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -182,7 +182,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -203,7 +203,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -224,7 +224,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -245,7 +245,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -266,7 +266,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -287,7 +287,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
@@ -308,7 +308,7 @@
       };
 
       $.ajax({
-        url: '../php/function.php',
+        url: '/IEUWFinal/php/function.php',
         type: 'post',
         data: data,
         success:function(response){
